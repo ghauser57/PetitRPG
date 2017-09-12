@@ -4,7 +4,7 @@ project(PetitRPG)
 set(EXECUTABLE_OUTPUT_PATH bin/${CMAKE_BUILD_TYPE})
 
 
-include_directories(includes)
+#include_directories(includes)
 
 file(
         GLOB_RECURSE
