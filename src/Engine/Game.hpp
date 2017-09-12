@@ -5,11 +5,11 @@
 #ifndef PETITRPG_GAME_HPP
 #define PETITRPG_GAME_HPP
 
-#include "Display.h"
+#include "Display.hpp"
 
 class Game {
     Display *display;
-    
+
 };
 
 
