@@ -21,19 +21,8 @@ Display::Display(const std::string &title, unsigned int width, unsigned int heig
     render();
 }
 
-Display::~Display()
-{
-    al_destroy_display(display);
-}
-
-void Display::render()
-{
-    al_clear_to_color(backgroundColor);
-    al_flip_display();
-}
-
 Display::Display(const std::string &title, const ALLEGRO_COLOR &backgroundColor):
-    title(title), backgroundColor(backgroundColor)
+        title(title), backgroundColor(backgroundColor)
 {
     al_set_new_display_flags(ALLEGRO_FULLSCREEN);
     int nbModes = al_get_num_display_modes();
@@ -50,4 +39,16 @@ Display::Display(const std::string &title, const ALLEGRO_COLOR &backgroundColor)
     height = static_cast<unsigned int>(al_get_display_height(display));
 
     render();
+}
+
+
+Display::~Display()
+{
+    al_destroy_display(display);
+}
+
+void Display::render()
+{
+    al_clear_to_color(backgroundColor);
+    al_flip_display();
 }
