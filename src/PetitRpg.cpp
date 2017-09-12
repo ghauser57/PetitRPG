@@ -10,7 +10,7 @@ int main (int argc, char** argv) {
         return -1;
     }
 
-    Display display(string("Petit RPG :)"), 640, 480, al_map_rgb(0,0,200));
+    Display display(string("Petit RPG :)"), al_map_rgb(0,0,200));
     al_rest(10.0);
 
     return 0;

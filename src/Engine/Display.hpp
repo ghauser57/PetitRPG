@@ -11,11 +11,12 @@
 
 class Display {
     std::string title;
-    unsigned int height, width;
+    unsigned int width, height;
     ALLEGRO_COLOR backgroundColor;
     ALLEGRO_DISPLAY *display;
 public:
-    Display(const std::string &title, unsigned int height, unsigned int width, const ALLEGRO_COLOR &backgroundColor);
+    Display(const std::string &title, unsigned int width, unsigned int height, const ALLEGRO_COLOR &backgroundColor);
+    Display(const std::string &title, const ALLEGRO_COLOR &backgroundColor);
     ~Display();
     void render();
 };
