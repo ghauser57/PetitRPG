@@ -27,7 +27,10 @@ ELSE()
     include_directories(lib/allegro/include)
     link_directories(lib/allegro/lib)
 
-    file(GLOB LIBRARIES "lib/allegro/bin")
+    file(GLOB DLLFile "lib/allegro/bin/*.dll")
+    file(COPY ${DLLFile} DESTINATION ${EXECUTABLE_OUTPUT_PATH})
+
+    file(GLOB LIBRARIES "lib/allegro/lib/*")
 ENDIF()
 
 TARGET_LINK_LIBRARIES(PetitRPG  ${LIBRARIES})
