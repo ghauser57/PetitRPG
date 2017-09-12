@@ -8,23 +8,41 @@
 #include "Display.hpp"
 #include "Game.hpp"
 
+/**
+ * Run the Application
+ */
 class App {
     const std::string APP_NAME = "Petit RPG :)";
-    //static App &instance;
+    static App instance;
     Display *display;
     Game *game;
     bool run;
+
+    /**
+     * Main loop game
+     * Render on display
+     */
     void loop();
+
+    /**
+     * Delete Game and Display
+     */
     void dispose();
-public:
     App();
-//    ~App(){dispose();}
+public:
+   ~App(){dispose();}
+
+    /**
+     * Initialize Allegro
+     */
     void init();
+
+    /**
+     * Create a display and game
+     * Launch the loop
+     */
     void start();
-    /*static App & getInstance()
-    {   if(instance==NULL)
-            instance = new App();
-        return instance;}*/
+    static App & getInstance();
 };
 
 

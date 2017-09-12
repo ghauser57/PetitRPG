@@ -15,7 +15,7 @@ Display::Display(const std::string &title, unsigned int width, unsigned int heig
     display = al_create_display(width, height);
     if(!display)
     {
-        throw new DisplayException("Failed to create display.");
+        throw DisplayException("Failed to create display.");
     }
     al_set_window_title(display, title.c_str());
     render();
@@ -31,7 +31,7 @@ Display::Display(const std::string &title, const ALLEGRO_COLOR &backgroundColor)
     display = al_create_display(mode.width, mode.height);
     if(!display)
     {
-        throw new DisplayException("Failed to create display.");
+        throw DisplayException("Failed to create display.");
     }
     al_set_window_title(display, title.c_str());
 

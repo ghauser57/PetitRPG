@@ -7,6 +7,8 @@
 #include <allegro5/keyboard.h>
 #include "../Exception/AppException.hpp"
 
+App App::instance = App();
+
 App::App():
     display(NULL),game(NULL),run(false)
 {}
@@ -25,10 +27,8 @@ void App::loop()
 
 void App::dispose()
 {
-    if(display)
-        delete display;
-    if(game)
-        delete game;
+    delete display;
+    delete game;
 }
 
 void App::init()
@@ -47,4 +47,9 @@ void App::start()
     run = true;
     loop();
     dispose();
+}
+
+App & App::getInstance()
+{
+    return instance;
 }

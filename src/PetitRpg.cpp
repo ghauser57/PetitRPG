@@ -2,7 +2,7 @@
 
 int main (int argc, char** argv) {
 
-    App app;
+    App app = App::getInstance();
     app.init();
     app.start();
 

@@ -11,7 +11,7 @@
 class DisplayException {
     std::string message;
 public:
-    DisplayException(const std::string &message):
+    explicit DisplayException(const std::string &message):
             message(message){}
 };
 

@@ -10,7 +10,7 @@
 class AppException {
     std::string message;
 public:
-    AppException(const std::string &message):
+    explicit AppException(const std::string &message):
             message(message){}
 };
 
