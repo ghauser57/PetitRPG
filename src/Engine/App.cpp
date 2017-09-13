@@ -6,6 +6,7 @@
 #include <allegro5/system.h>
 #include <allegro5/keyboard.h>
 #include "../Exception/AppException.hpp"
+#include "../Utils/Log.h"
 
 App App::instance = App();
 
@@ -15,6 +16,7 @@ App::App():
 
 void App::loop()
 {
+    Log().Get(logINFO) << "Starting loop ";
     ALLEGRO_KEYBOARD_STATE key;
     while(run)
     {
@@ -27,23 +29,28 @@ void App::loop()
 
 void App::dispose()
 {
+    Log().Get(logINFO) << "Dispose app";
     delete display;
     delete game;
 }
 
 void App::init()
 {
+    Log().Get(logINFO) << "Init app";
     if (!al_init()) {
+        Log().Get(logERROR) << "Failed to initialize allegro.";
         AppException("Failed to initialize allegro.");
     }
     if (!al_install_keyboard()) {
+        Log().Get(logERROR) << "Failed to install keyboard.";
         AppException("Failed to install keyboard.");
     }
 }
 
 void App::start()
 {
-    display = new Display(APP_NAME, al_map_rgb(0,0,200));
+    Log().Get(logINFO) << "Start app";
+    display = new Display(APP_NAME, al_map_rgb(26, 188, 156));
     run = true;
     loop();
     dispose();

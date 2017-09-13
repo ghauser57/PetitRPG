@@ -12,7 +12,7 @@
  * Run the Application
  */
 class App {
-    const std::string APP_NAME = "Petit RPG :)";
+    const std::string APP_NAME = "Pixel Adventure";
     static App instance;
     Display *display;
     Game *game;
