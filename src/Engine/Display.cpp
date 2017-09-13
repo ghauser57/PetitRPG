@@ -24,7 +24,7 @@ Display::Display(const std::string &title, unsigned int width, unsigned int heig
 Display::Display(const std::string &title, const ALLEGRO_COLOR &backgroundColor):
         title(title), backgroundColor(backgroundColor)
 {
-    al_set_new_display_flags(ALLEGRO_FULLSCREEN);
+    al_set_new_display_flags(ALLEGRO_FULLSCREEN_WINDOW);
     int nbModes = al_get_num_display_modes();
     ALLEGRO_DISPLAY_MODE mode;
     al_get_display_mode(nbModes - 1, &mode);
@@ -44,7 +44,7 @@ Display::Display(const std::string &title, const ALLEGRO_COLOR &backgroundColor)
 
 Display::~Display()
 {
-    al_destroy_display(display);
+    //al_destroy_display(display);
 }
 
 void Display::render()

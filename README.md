@@ -1,4 +1,5 @@
-# Petit RPG
+# Pixel Adventure
+
 ## C'est quoi ?
 Hello, bienvenue sur ce projet.
 
