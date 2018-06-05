@@ -31,7 +31,7 @@ Il existe deux solutions:
 3. __Windows__
     1. Placer les fichers .dll dans le même répertoire que l'executable
 
-### Installion depuis les sources
+### Installation depuis les sources
 __Prérequis__ [CMake](http://cmake.org), [Git](http://git-scm.com/) et [Allegro](http://allegro.cc/) sont nécessaires
 
 1. Cloner le projet depuis _GitHub_ `git clone https://github.com/ghauser57/PetitRPG.git`
